@@ -8,6 +8,7 @@ int main() {
  string str="hello";
  
  set(str);
+ cout<<"\n";
  hash(str);
 }
 
@@ -25,11 +26,21 @@ for(auto itr : s){
 }
 }
 
-
 void hash(string str){
     
-map<char,int>ma;
-
+unordered_map<char,int>ma;
 int i=0;
+
+while(str[i]){
+    if(ma[str[i]]==0){
+        
+        ma[str[i]]++;
+    }
+    i++;
+}
+
+for(auto itr : ma){
+    cout<<itr.first;
+}
 
 }
