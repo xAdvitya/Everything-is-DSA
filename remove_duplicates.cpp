@@ -1,18 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
-void set(string str);
-void hash(string str);
+void set_bst(string str);
+void hashing(string str);
 
 int main() {
  
  string str="hello";
  
- set(str);
+ set_bst(str);
  cout<<"\n";
- hash(str);
+ hashing(str);
 }
 
-void set(string str){
+void set_bst(string str){
 
 set<char> s;
  int i=0;
@@ -25,22 +25,26 @@ for(auto itr : s){
     cout<<itr;
 }
 }
-
-void hash(string str){
+/////////////under development///////////////
+void hashing(string str){
     
 unordered_map<char,int>ma;
-int i=0;
-
-while(str[i]){
+ string str1;
+for(int i=0;i<str.length();i++){
+    
+    int index=0;
+   
     if(ma[str[i]]==0){
-        
+
+        str1[index++] = str[i];
+        cout<<str1[index]<<" "<<str[i]<<endl; 
         ma[str[i]]++;
+        //index++;
     }
-    i++;
+
 }
 
-for(auto itr : ma){
-    cout<<itr.first;
-}
+str1[1]='p';
+cout<<str1;
 
 }
