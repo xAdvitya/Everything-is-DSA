@@ -7,21 +7,23 @@ class node{
     node* next; 
 };
 void recurse_print(node* head);
+
 node *temp=NULL,*head=NULL;
 
-void recurse_print(node* head)
+void recurse_print(node* n)
 {
-    if(head){
-        cout<<head->data<<endl;
-        recurse_print(head->next);
+    if(n != NULL){
+        cout<<n->data<<endl;
+        recurse_print(n->next);
     }
 }
 
 int main()
 {
-    int i=5;
+int i=5;
+
 while(i--){
- temp = new node;
+ temp = new node();
  temp->data=10-i;
  
  if(head == NULL){
@@ -33,5 +35,6 @@ while(i--){
  }
 
 }
-  recurse_print(head);  
+recurse_print(head);
+
 }
