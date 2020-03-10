@@ -8,6 +8,7 @@ class node{
 };
 
 void reverse(node *head);
+void reverse(node *head);
 node *temp=NULL,*head=NULL;
 
 void reverse(node *head){
